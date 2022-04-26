@@ -1,5 +1,5 @@
 # TCN_TRAS_power
-use TCN and Transformer model for "Hourly Energy Consumption" data
+use TCN and Transformer model for forecasting on "Hourly Energy Consumption" data
 ## 1. Temporal Convolutional Networks
 * Advantages of TCN over RNN
   - [x] Parallelism  
