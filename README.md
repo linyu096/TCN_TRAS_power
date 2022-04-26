@@ -56,7 +56,7 @@ Layer Normalization (LN) is often used in RNN. The concept is similar to BN. The
 ### Component features 5 :Sequence Mask
 The Decoder is not allowed to see future messages, so we have to cover up the vectors after i+1.  
 
-![Sequence Mask](https://miro.medium.com/max/1116/1*pTvOxquqbWusuu56UvHUhA.png)
+![Sequence Mask](https://miro.medium.com/max/666/1*lGtVw1yq5YzpaQFCR0t6qg.png)
 
 ## References
  <https://www.twblogs.net/a/5d6dc709bd9eee541c33c0b2>  
