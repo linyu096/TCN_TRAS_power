@@ -29,10 +29,40 @@ Prevent units from co-adapting too much, and turn on all neurons during Inferenc
 ![Dropout](https://miro.medium.com/max/1400/1*yk0Eo4uYIk84Gu_INULcpg.png)
 
 ## Transformer model
+* The motivation of Transformer is to solve the following problems of RNNs:
+  * Sequential computation is difficult to parallelize.
+  * Use the attention mechanism to solve the problem that RNNs cannot rely on long distances. The farther the words are, the harder it is to find each other's information.
+  * Excessive RNN architecture may cause the gradient to disappear  
+### Structure
+Transformer consists of Encoder and Decoder, which are very different in nature and should be understood separately. The former is used to compress sequence information, and the latter is used to convert (decompress) the information extracted by the former into information required by the task.  
+![Structure](https://miro.medium.com/max/746/1*6UnhXuD0hFzt7YBu1ONrcQ.png)
+### Component features 1 : Self-attention
+The role of Query and Key is to determine the weight of Value, and Key and Value form a token. When Query and Key are strongly related to the task, the Value corresponding to Key will be enlarged.  
 
+![Self-attention](https://miro.medium.com/max/1400/1*fEzNWgidGdKx4Xez4C0_TQ.png)
+
+### Component features 2 : Muti-Head Attention
+The advantage of this is that each head (q, k, v) can focus on different information, some focus on local, some focus on global information, etc.  
+![ Muti-Head Attention](https://miro.medium.com/max/1400/1*1AQLecxGvtjoKWBxLWj7PQ.png)
+
+### Component features 3 : Add & Norm layer
+Since the input and output have the same shape, we can use residual connection to add the output to the input. And use LayerNorm to normalize in the direction of each instance.  
+
+![Add & Norm layer](https://miro.medium.com/max/1116/1*pTvOxquqbWusuu56UvHUhA.png)
+
+### Component features 4 : Layer Normalization vs Batch Normalization
+Layer Normalization (LN) is often used in RNN. The concept is similar to BN. The difference is that LN normalizes each sample.  
+![Layer Normalization vs Batch Normalization](https://miro.medium.com/max/1400/0*oS4S5ffAoCd3qP6B.png)
+### Component features 5 :Sequence Mask
+The Decoder is not allowed to see future messages, so we have to cover up the vectors after i+1.  
+
+![Sequence Mask](https://miro.medium.com/max/1116/1*pTvOxquqbWusuu56UvHUhA.png)
 
 ## References
  <https://www.twblogs.net/a/5d6dc709bd9eee541c33c0b2>  
  <https://meetonfriday.com/posts/7c0020de/>  
  <https://medium.com/@a5560648/dropout-5fb2105dbf7c>  
  <https://zhuanlan.zhihu.com/p/52477665>
+ <https://ithelp.ithome.com.tw/articles/10206317>
+ <https://medium.com/%E5%B7%A5%E4%BA%BA%E6%99%BA%E6%85%A7/review-attention-is-all-you-need-62a1c93c48a5>
+ <https://medium.com/ching-i/transformer-attention-is-all-you-need-c7967f38af14>
