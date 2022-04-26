@@ -28,7 +28,11 @@ Adaptive model depth, alleviating the phenomenon of gradient vanishing and explo
 Prevent units from co-adapting too much, and turn on all neurons during Inference, so that the average value of each small neural network can be easily estimated, using dropout can greatly reduce the possibility of overfitting  
 ![Dropout](https://miro.medium.com/max/1400/1*yk0Eo4uYIk84Gu_INULcpg.png)
 
+## Transformer model
+
+
 ## References
  <https://www.twblogs.net/a/5d6dc709bd9eee541c33c0b2>  
  <https://meetonfriday.com/posts/7c0020de/>  
- <https://medium.com/@a5560648/dropout-5fb2105dbf7c>
+ <https://medium.com/@a5560648/dropout-5fb2105dbf7c>  
+ <https://zhuanlan.zhihu.com/p/52477665>
