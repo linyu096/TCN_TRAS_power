@@ -61,6 +61,7 @@ The Decoder is not allowed to see future messages, so we have to cover up the ve
 ![Sequence Mask](https://miro.medium.com/max/666/1*lGtVw1yq5YzpaQFCR0t6qg.png)
 
 ## References
+ <https://unit8.com/resources/temporal-convolutional-networks-and-forecasting/>
  <https://www.twblogs.net/a/5d6dc709bd9eee541c33c0b2>  
  <https://meetonfriday.com/posts/7c0020de/>  
  <https://medium.com/@a5560648/dropout-5fb2105dbf7c>  
