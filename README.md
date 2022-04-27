@@ -27,7 +27,9 @@ Adaptive model depth, alleviating the phenomenon of gradient vanishing and explo
 ### Supplementary information : Dropout
 Prevent units from co-adapting too much, and turn on all neurons during Inference, so that the average value of each small neural network can be easily estimated, using dropout can greatly reduce the possibility of overfitting  
 ![Dropout](https://miro.medium.com/max/1400/1*yk0Eo4uYIk84Gu_INULcpg.png)
-
+### Parameters setting
+Given input_length, kernel_size, dilation_base and the minimum number of layers required for full history coverage, the basic TCN network would look something like this:  
+![Parameters setting](https://unit8.com/wp-content/uploads/2021/07/image-43.png)
 ## Transformer model
 * The motivation of Transformer is to solve the following problems of RNNs:
   * Sequential computation is difficult to parallelize.
