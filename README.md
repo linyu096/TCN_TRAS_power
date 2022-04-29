@@ -67,5 +67,5 @@ The Decoder is not allowed to see future messages, so we have to cover up the ve
  <https://medium.com/@a5560648/dropout-5fb2105dbf7c>  
  <https://zhuanlan.zhihu.com/p/52477665>
  <https://ithelp.ithome.com.tw/articles/10206317>
- <https://medium.com/%E5%B7%A5%E4%BA%BA%E6%99%BA%E6%85%A7/review-attention-is-all-you-need-62a1c93c48a5>
+ <https://medium.com/%E5%B7%A5%E4%BA%BA%E6%99%BA%E6%85%A7/review-attention-is-all-you-need-62a1c93c48a5>  
  <https://medium.com/ching-i/transformer-attention-is-all-you-need-c7967f38af14>
